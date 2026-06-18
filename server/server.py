@@ -225,7 +225,7 @@ async def websocket_endpoint(websocket: WebSocket):
                     logging.info(f'[Scanning] Whisper detected: "{detected_text}"')
                     normalized_text = detected_text.lower().replace(',', '').replace('.', '')
 
-                    if any(word in normalized_text for word in ['okay bro', 'ok bro', 'bro']):
+                    if any(word in normalized_text for word in ['salut', 'marius', 'iulian']):
                         logging.info('WAKE WORD DETECTED "Okay Bro" !!!')
                         await websocket.send_text("WOKE_UP")
                         is_recording_command = True
