@@ -97,7 +97,7 @@ def init_models():
     global whisper_model
     logging.info('Initialise models')
     whisper_model = WhisperModel(
-        'base', 
+        'small', 
         device=config['whisper_device_type'], 
         compute_type='int8')
     
